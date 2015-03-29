@@ -4,14 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static String[] test() {
-        return new String[]{"ceva", "altceva"};
-    }
 
     public static void main(String[] args) {
-        List a = new ArrayList();
-        a.add(0,"ceva");
-        System.out.println(a.get(0));
-
+        LastTouchMapImpl<Integer, String> listMap = new LastTouchMapImpl<Integer, String>();
+        listMap.put(10,"ceva");
+        listMap.put(2,"altceva");
+        listMap.put(2,"acltceva");
+        listMap.put(10,"axceva");
+        listMap.put(3,"axceva2");
+        listMap.put(4,"axceva3");
+        List<String> list;
+        list = listMap.getLast(4);
+        for (Object iter : list) {
+            System.out.println(iter);
+        }
+        System.out.println(listMap.findEntry(2));
     }
+
+
 }

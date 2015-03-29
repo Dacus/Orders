@@ -2,10 +2,6 @@ package com.company;
 
 import java.util.List;
 
-/**
- * Created by intern on 3/23/15.
- */
-
 public interface LastTouchMap<K, V> {
     public int size();
 
