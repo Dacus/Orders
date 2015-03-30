@@ -2,7 +2,11 @@ package com.company;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.contains;
 
 public class LastTouchMapImplTest {
 
@@ -26,11 +30,22 @@ public class LastTouchMapImplTest {
 
     @Test
     public void testGetLast() throws Exception {
-
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(10,"Alex");
+        list.put(2,"Andi");
+        list.put(3,"Cosmin");
+        list.put(2,"Gelu");
+        List<String> l = list.getLast(3);
+        assertThat(l, contains("Gelu","Cosmin","Alex"));
     }
 
     @Test
     public void testFindEntry() throws Exception {
-
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(10,"Alex");
+        list.put(2,"Andi");
+        list.put(3,"Cosmin");
+        list.put(2,"Gelu");
+//        assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
     }
 }

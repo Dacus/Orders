@@ -7,60 +7,9 @@ import java.util.List;
 public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private static final int BIN_COUNT = 1000;
-    private Entry head = null;
+    private int size = 0;
     private final Object[] entries = new Object[BIN_COUNT];
-    private static int size = 0;
-
-
-    private class Entry {
-        private final K key;
-        private V value;
-        private Entry previous = null;
-        private Entry next = null;
-
-        @Override
-        public String toString(){
-            return "{key: " + key + "} {value: " + value + "}";
-        }
-
-        public void setValue(V value) {
-            this.value = value;
-        }
-
-        public Entry getNext() {
-            return next;
-        }
-
-        public K getKey() {
-            return key;
-        }
-
-        public V getValue() {
-            return value;
-        }
-
-        public void setNext(Entry next) {
-            this.next = next;
-        }
-
-        public Entry getPrevious() {
-            return previous;
-        }
-
-        public void setPrevious(Entry previous) {
-            this.previous = previous;
-        }
-
-        public Entry(K key, V value, Entry next, Entry previous) {
-            this.key = key;
-            this.value = value;
-            this.next = next;
-            this.previous = previous;
-        }
-
-
-    }
-
+    private Entry head = null;
 
     @Override
     public int size() {
@@ -69,7 +18,6 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     @Override
     public void put(K key, V value) {
-//        Entry existingEntry = findEntry(key);
         int index = hash(key);
 
         while ((entries[index] != null) && (((Entry) entries[index]).getKey() != key) && (index < BIN_COUNT)) {
@@ -140,6 +88,55 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
             index++;
         }
         return null;
+    }
+
+    private class Entry {
+        private final K key;
+        private V value;
+        private Entry previous = null;
+        private Entry next = null;
+
+        public Entry(K key, V value, Entry next, Entry previous) {
+            this.key = key;
+            this.value = value;
+            this.next = next;
+            this.previous = previous;
+        }
+
+        @Override
+        public String toString() {
+            return "{key: " + key + "} {value: " + value + "}";
+        }
+
+        public Entry getNext() {
+            return next;
+        }
+
+        public void setNext(Entry next) {
+            this.next = next;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        public void setValue(V value) {
+            this.value = value;
+        }
+
+        public Entry getPrevious() {
+            return previous;
+        }
+
+        public void setPrevious(Entry previous) {
+            this.previous = previous;
+        }
+
+
     }
 
 }
