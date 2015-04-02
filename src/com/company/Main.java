@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -18,7 +17,7 @@ public class Main {
         for (Object iter : list) {
             System.out.println(iter);
         }
-        System.out.println(listMap.findEntry(2));
+//        System.out.println(listMap.findEntry(2));
     }
 
 

@@ -1,12 +1,12 @@
 package com.company;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.*;
 
 public class MyLastTouchMapTest {
     private LastTouchMapImpl<Integer, String> map;
@@ -126,5 +126,46 @@ public class MyLastTouchMapTest {
 
         List<String> l = map.getLast(15);
         assertThat(l, contains("m1", "m2", "m5", "m4", "m3"));
+    }
+
+    @Test
+    public void testIsEmptyTrue() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void testIsEmptyFalse() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(10, "Alex");
+        assertFalse(list.isEmpty());
+    }
+
+    @Test
+    public void testContainsKeyTrue() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m4");
+        list.put(3, "m3");
+        boolean a = list.containsKey(5);
+        assertThat(a, is(true));
+    }
+
+    @Test
+    public void testContainsKeyFalse() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m4");
+        list.put(3, "m3");
+        boolean a = list.containsKey(10);
+        assertThat(a, is(false));
     }
 }

@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.contains;
 
 public class LastTouchMapImplTest {
 
@@ -20,7 +20,7 @@ public class LastTouchMapImplTest {
         LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
         list.put(1,"ceva");
         list.put(2,"altceva");
-        assertEquals(list.size(),2);
+        assertEquals(list.size(), 2);
     }
 
     @Test
@@ -45,7 +45,9 @@ public class LastTouchMapImplTest {
         list.put(10,"Alex");
         list.put(2,"Andi");
         list.put(3,"Cosmin");
-        list.put(2,"Gelu");
+        list.put(2, "Gelu");
  //       assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
     }
+
+
 }
