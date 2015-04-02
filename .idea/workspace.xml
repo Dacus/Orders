@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39433e9c-cb1d-4a3f-84e9-ec751eab7891" name="Default" comment="Implemented Get">
+    <list default="true" id="39433e9c-cb1d-4a3f-84e9-ec751eab7891" name="Default" comment="Fixed Contains Value">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" afterPath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,16 +37,9 @@
       <file leaf-file-name="LastTouchMapImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55780345">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-              <folding>
-                <element signature="e#8336#8337#0" expanded="true" />
-                <element signature="e#8363#8364#0" expanded="true" />
-                <element signature="e#11979#11980#0" expanded="true" />
-                <element signature="e#12006#12007#0" expanded="true" />
-                <element signature="e#13499#13500#0" expanded="true" />
-                <element signature="e#13548#13549#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.69219655">
+              <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -506,7 +499,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427987767238</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed Contains Value">
+      <created>1427987946011</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1427987946011</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -583,7 +582,8 @@
     <MESSAGE value="Changed contains key" />
     <MESSAGE value="Changed contains value" />
     <MESSAGE value="Implemented Get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Get" />
+    <MESSAGE value="Fixed Contains Value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Contains Value" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1028,16 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20809248">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1427987566425" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55780345">
@@ -1063,18 +1053,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20809248">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1427987566425" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55780345">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-          <folding>
-            <element signature="e#8336#8337#0" expanded="true" />
-            <element signature="e#8363#8364#0" expanded="true" />
-            <element signature="e#11979#11980#0" expanded="true" />
-            <element signature="e#12006#12007#0" expanded="true" />
-            <element signature="e#13499#13500#0" expanded="true" />
-            <element signature="e#13548#13549#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.69219655">
+          <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

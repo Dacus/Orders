@@ -6,7 +6,7 @@ import java.util.*;
 public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private static final int BIN_COUNT = 1000;
-    private final Object[] entries = new Object[BIN_COUNT];
+    private Object[] entries = new Object[BIN_COUNT];
     private int size = 0;
     private Entry head = null;
 
@@ -231,11 +231,9 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public void clear() {
-        Entry entry = head;
-        while (entry.getNext() != null) {
-            if (entry.getValue().equals(value)) return true;
-        }
         head = null;
+        entries = null;
+        entries = new Object[BIN_COUNT];
     }
 
     /**
