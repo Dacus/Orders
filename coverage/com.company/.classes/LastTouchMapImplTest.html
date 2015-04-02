@@ -1,0 +1,135 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: LastTouchMapImplTest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.company</a> ]
+</div>
+
+<h1>Coverage Summary for Class: LastTouchMapImplTest (com.company)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LastTouchMapImplTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 19)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.company;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.junit.Test;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import java.util.List;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import static org.hamcrest.Matchers.contains;
+<i>8</i>&nbsp;import static org.junit.Assert.*;
+<i>9</i>&nbsp;
+<b class="nc"><i>10</i>&nbsp;public class LastTouchMapImplTest {</b>
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;    @Test
+<i>13</i>&nbsp;    public void testSizeZero() throws Exception {
+<b class="nc"><i>14</i>&nbsp;        LastTouchMapImpl&lt;Integer, String&gt; list = new LastTouchMapImpl&lt;&gt;();</b>
+<b class="nc"><i>15</i>&nbsp;        assertEquals(list.size(), 0);</b>
+<i>16</i>&nbsp;    }
+<i>17</i>&nbsp;    @Test
+<i>18</i>&nbsp;    public void testSizeTwo() throws Exception {
+<b class="nc"><i>19</i>&nbsp;        LastTouchMapImpl&lt;Integer, String&gt; list = new LastTouchMapImpl&lt;&gt;();</b>
+<b class="nc"><i>20</i>&nbsp;        list.put(1,&quot;ceva&quot;);</b>
+<b class="nc"><i>21</i>&nbsp;        list.put(2,&quot;altceva&quot;);</b>
+<b class="nc"><i>22</i>&nbsp;        assertEquals(list.size(),2);</b>
+<i>23</i>&nbsp;    }
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @Test
+<i>26</i>&nbsp;    public void testPut() throws Exception {
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    }
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    @Test
+<i>31</i>&nbsp;    public void testGetLast() throws Exception {
+<b class="nc"><i>32</i>&nbsp;        LastTouchMapImpl&lt;Integer, String&gt; list = new LastTouchMapImpl&lt;&gt;();</b>
+<b class="nc"><i>33</i>&nbsp;        list.put(10,&quot;Alex&quot;);</b>
+<b class="nc"><i>34</i>&nbsp;        list.put(2,&quot;Andi&quot;);</b>
+<b class="nc"><i>35</i>&nbsp;        list.put(3,&quot;Cosmin&quot;);</b>
+<b class="nc"><i>36</i>&nbsp;        list.put(2,&quot;Gelu&quot;);</b>
+<b class="nc"><i>37</i>&nbsp;        List&lt;String&gt; l = list.getLast(3);</b>
+<b class="nc"><i>38</i>&nbsp;        assertThat(l, contains(&quot;Gelu&quot;,&quot;Cosmin&quot;,&quot;Alex&quot;));</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    @Test
+<i>42</i>&nbsp;    public void testFindEntry() throws Exception {
+<b class="nc"><i>43</i>&nbsp;        LastTouchMapImpl&lt;Integer, String&gt; list = new LastTouchMapImpl&lt;&gt;();</b>
+<b class="nc"><i>44</i>&nbsp;        list.put(10,&quot;Alex&quot;);</b>
+<b class="nc"><i>45</i>&nbsp;        list.put(2,&quot;Andi&quot;);</b>
+<b class="nc"><i>46</i>&nbsp;        list.put(3,&quot;Cosmin&quot;);</b>
+<b class="nc"><i>47</i>&nbsp;        list.put(2, &quot;Gelu&quot;);</b>
+<i>48</i>&nbsp; //       assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(&quot;&quot;));
+<i>49</i>&nbsp;    }
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;
+<i>52</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2015-04-02 17:57</div>
+</div>
+</body>
+</html>

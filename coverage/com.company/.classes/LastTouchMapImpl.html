@@ -1,0 +1,467 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: LastTouchMapImpl</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.company</a> ]
+</div>
+
+<h1>Coverage Summary for Class: LastTouchMapImpl (com.company)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LastTouchMapImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    46.7%
+  </span>
+  <span class="absValue">
+    (7/ 15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (52/ 65)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">LastTouchMapImpl$Entry</td>
+<td class="coverageStat">
+  <span class="percent">
+    88.9%
+  </span>
+  <span class="absValue">
+    (8/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94.7%
+  </span>
+  <span class="absValue">
+    (18/ 19)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    62.5%
+  </span>
+  <span class="absValue">
+    (15/ 24)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83.3%
+  </span>
+  <span class="absValue">
+    (70/ 84)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.company;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.*;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;
+<b class="fc"><i>6</i>&nbsp;public class LastTouchMapImpl&lt;K, V&gt; implements LastTouchMap&lt;K, V&gt; {</b>
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;    private static final int BIN_COUNT = 1000;
+<b class="fc"><i>9</i>&nbsp;    private final Object[] entries = new Object[BIN_COUNT];</b>
+<b class="fc"><i>10</i>&nbsp;    private int size = 0;</b>
+<b class="fc"><i>11</i>&nbsp;    private Entry head = null;</b>
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    @Override
+<i>14</i>&nbsp;    public int size() {
+<b class="fc"><i>15</i>&nbsp;        return size;</b>
+<i>16</i>&nbsp;    }
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    /**
+<i>19</i>&nbsp;     * Returns &lt;tt&gt;true&lt;/tt&gt; if this map contains no key-value mappings.
+<i>20</i>&nbsp;     *
+<i>21</i>&nbsp;     * @return &lt;tt&gt;true&lt;/tt&gt; if this map contains no key-value mappings
+<i>22</i>&nbsp;     */
+<i>23</i>&nbsp;    @Override
+<i>24</i>&nbsp;    public boolean isEmpty() {
+<b class="fc"><i>25</i>&nbsp;        if (head == null) return true;</b>
+<b class="fc"><i>26</i>&nbsp;        return false;</b>
+<i>27</i>&nbsp;    }
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    /**
+<i>30</i>&nbsp;     * Returns &lt;tt&gt;true&lt;/tt&gt; if this map contains a mapping for the specified
+<i>31</i>&nbsp;     * key.  More formally, returns &lt;tt&gt;true&lt;/tt&gt; if and only if
+<i>32</i>&nbsp;     * this map contains a mapping for a key &lt;tt&gt;k&lt;/tt&gt; such that
+<i>33</i>&nbsp;     * &lt;tt&gt;(key==null ? k==null : key.equals(k))&lt;/tt&gt;.  (There can be
+<i>34</i>&nbsp;     * at most one such mapping.)
+<i>35</i>&nbsp;     *
+<i>36</i>&nbsp;     * @param key key whose presence in this map is to be tested
+<i>37</i>&nbsp;     * @return &lt;tt&gt;true&lt;/tt&gt; if this map contains a mapping for the specified
+<i>38</i>&nbsp;     * key
+<i>39</i>&nbsp;     * @throws ClassCastException   if the key is of an inappropriate type for
+<i>40</i>&nbsp;     *                              this map
+<i>41</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>42</i>&nbsp;     * @throws NullPointerException if the specified key is null and this map
+<i>43</i>&nbsp;     *                              does not permit null keys
+<i>44</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>45</i>&nbsp;     */
+<i>46</i>&nbsp;    @Override
+<i>47</i>&nbsp;    public boolean containsKey(Object key) {
+<b class="fc"><i>48</i>&nbsp;        int index = hash(key);</b>
+<b class="fc"><i>49</i>&nbsp;        while (entries[index] != null &amp;&amp; index &lt; BIN_COUNT) {</b>
+<b class="fc"><i>50</i>&nbsp;            if (((Entry) entries[index]).getKey().equals(key)) {</b>
+<b class="fc"><i>51</i>&nbsp;                return true;</b>
+<i>52</i>&nbsp;            }
+<b class="nc"><i>53</i>&nbsp;            index++;</b>
+<i>54</i>&nbsp;        }
+<b class="fc"><i>55</i>&nbsp;        return false;</b>
+<i>56</i>&nbsp;    }
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;    /**
+<i>59</i>&nbsp;     * Returns &lt;tt&gt;true&lt;/tt&gt; if this map maps one or more keys to the
+<i>60</i>&nbsp;     * specified value.  More formally, returns &lt;tt&gt;true&lt;/tt&gt; if and only if
+<i>61</i>&nbsp;     * this map contains at least one mapping to a value &lt;tt&gt;v&lt;/tt&gt; such that
+<i>62</i>&nbsp;     * &lt;tt&gt;(value==null ? v==null : value.equals(v))&lt;/tt&gt;.  This operation
+<i>63</i>&nbsp;     * will probably require time linear in the map size for most
+<i>64</i>&nbsp;     * implementations of the &lt;tt&gt;Map&lt;/tt&gt; interface.
+<i>65</i>&nbsp;     *
+<i>66</i>&nbsp;     * @param value value whose presence in this map is to be tested
+<i>67</i>&nbsp;     * @return &lt;tt&gt;true&lt;/tt&gt; if this map maps one or more keys to the
+<i>68</i>&nbsp;     * specified value
+<i>69</i>&nbsp;     * @throws ClassCastException   if the value is of an inappropriate type for
+<i>70</i>&nbsp;     *                              this map
+<i>71</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>72</i>&nbsp;     * @throws NullPointerException if the specified value is null and this
+<i>73</i>&nbsp;     *                              map does not permit null values
+<i>74</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>75</i>&nbsp;     */
+<i>76</i>&nbsp;    @Override
+<i>77</i>&nbsp;    public boolean containsValue(Object value) {
+<i>78</i>&nbsp;
+<b class="nc"><i>79</i>&nbsp;        return false;</b>
+<i>80</i>&nbsp;    }
+<i>81</i>&nbsp;
+<i>82</i>&nbsp;    /**
+<i>83</i>&nbsp;     * Returns the value to which the specified key is mapped,
+<i>84</i>&nbsp;     * or {@code null} if this map contains no mapping for the key.
+<i>85</i>&nbsp;     * &lt;p/&gt;
+<i>86</i>&nbsp;     * &lt;p&gt;More formally, if this map contains a mapping from a key
+<i>87</i>&nbsp;     * {@code k} to a value {@code v} such that {@code (key==null ? k==null :
+<i>88</i>&nbsp;     * key.equals(k))}, then this method returns {@code v}; otherwise
+<i>89</i>&nbsp;     * it returns {@code null}.  (There can be at most one such mapping.)
+<i>90</i>&nbsp;     * &lt;p/&gt;
+<i>91</i>&nbsp;     * &lt;p&gt;If this map permits null values, then a return value of
+<i>92</i>&nbsp;     * {@code null} does not &lt;i&gt;necessarily&lt;/i&gt; indicate that the map
+<i>93</i>&nbsp;     * contains no mapping for the key; it&#39;s also possible that the map
+<i>94</i>&nbsp;     * explicitly maps the key to {@code null}.  The {@link #containsKey
+<i>95</i>&nbsp;     * containsKey} operation may be used to distinguish these two cases.
+<i>96</i>&nbsp;     *
+<i>97</i>&nbsp;     * @param key the key whose associated value is to be returned
+<i>98</i>&nbsp;     * @return the value to which the specified key is mapped, or
+<i>99</i>&nbsp;     * {@code null} if this map contains no mapping for the key
+<i>100</i>&nbsp;     * @throws ClassCastException   if the key is of an inappropriate type for
+<i>101</i>&nbsp;     *                              this map
+<i>102</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>103</i>&nbsp;     * @throws NullPointerException if the specified key is null and this map
+<i>104</i>&nbsp;     *                              does not permit null keys
+<i>105</i>&nbsp;     *                              (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>106</i>&nbsp;     */
+<i>107</i>&nbsp;    @Override
+<i>108</i>&nbsp;    public V get(Object key) {
+<b class="nc"><i>109</i>&nbsp;        return null;</b>
+<i>110</i>&nbsp;    }
+<i>111</i>&nbsp;
+<i>112</i>&nbsp;    @Override
+<i>113</i>&nbsp;    public V put(K key, V value) {
+<b class="fc"><i>114</i>&nbsp;        int index = hash(key);</b>
+<i>115</i>&nbsp;
+<b class="fc"><i>116</i>&nbsp;        while ((entries[index] != null) &amp;&amp; (((Entry) entries[index]).getKey() != key) &amp;&amp; (index &lt; BIN_COUNT)) {</b>
+<b class="nc"><i>117</i>&nbsp;            index++;</b>
+<i>118</i>&nbsp;        }
+<b class="fc"><i>119</i>&nbsp;        if (entries[index] != null) {</b>
+<b class="fc"><i>120</i>&nbsp;            Entry entry = (Entry) entries[index];</b>
+<b class="fc"><i>121</i>&nbsp;            entry.setValue(value);</b>
+<b class="fc"><i>122</i>&nbsp;            if (entry.getNext() == null) {</b>
+<b class="fc"><i>123</i>&nbsp;                if (entry.getPrevious() != null) {</b>
+<b class="fc"><i>124</i>&nbsp;                    entry.getPrevious().setNext(null);</b>
+<b class="fc"><i>125</i>&nbsp;                    entry.setNext(head);</b>
+<b class="fc"><i>126</i>&nbsp;                    head.setPrevious(entry);</b>
+<b class="fc"><i>127</i>&nbsp;                    head = entry;</b>
+<b class="fc"><i>128</i>&nbsp;                    return value;</b>
+<i>129</i>&nbsp;                }
+<i>130</i>&nbsp;            }
+<b class="fc"><i>131</i>&nbsp;            if (entry.getNext() != null &amp;&amp; entry.getPrevious() != null) {</b>
+<b class="fc"><i>132</i>&nbsp;                entry.getPrevious().setNext(entry.getNext());</b>
+<b class="fc"><i>133</i>&nbsp;                entry.getNext().setPrevious(entry.getPrevious());</b>
+<b class="fc"><i>134</i>&nbsp;                entry.setNext(head);</b>
+<b class="fc"><i>135</i>&nbsp;                head.setPrevious(entry);</b>
+<b class="fc"><i>136</i>&nbsp;                head = entry;</b>
+<b class="fc"><i>137</i>&nbsp;                return value;</b>
+<i>138</i>&nbsp;            }
+<b class="fc"><i>139</i>&nbsp;            return value;</b>
+<i>140</i>&nbsp;        }
+<b class="fc"><i>141</i>&nbsp;        if (head == null) {</b>
+<b class="fc"><i>142</i>&nbsp;            entries[index] = new Entry(key, value, null, null);</b>
+<b class="fc"><i>143</i>&nbsp;            head = (Entry) entries[index];</b>
+<b class="fc"><i>144</i>&nbsp;            size++;</b>
+<i>145</i>&nbsp;        } else {
+<b class="fc"><i>146</i>&nbsp;            entries[index] = new Entry(key, value, head, null);</b>
+<b class="fc"><i>147</i>&nbsp;            head.previous = (Entry) entries[index];</b>
+<b class="fc"><i>148</i>&nbsp;            head = (Entry) entries[index];</b>
+<b class="fc"><i>149</i>&nbsp;            size++;</b>
+<i>150</i>&nbsp;        }
+<b class="fc"><i>151</i>&nbsp;        return value;</b>
+<i>152</i>&nbsp;    }
+<i>153</i>&nbsp;
+<i>154</i>&nbsp;    /**
+<i>155</i>&nbsp;     * Removes the mapping for a key from this map if it is present
+<i>156</i>&nbsp;     * (optional operation).   More formally, if this map contains a mapping
+<i>157</i>&nbsp;     * from key &lt;tt&gt;k&lt;/tt&gt; to value &lt;tt&gt;v&lt;/tt&gt; such that
+<i>158</i>&nbsp;     * &lt;code&gt;(key==null ?  k==null : key.equals(k))&lt;/code&gt;, that mapping
+<i>159</i>&nbsp;     * is removed.  (The map can contain at most one such mapping.)
+<i>160</i>&nbsp;     * &lt;p/&gt;
+<i>161</i>&nbsp;     * &lt;p&gt;Returns the value to which this map previously associated the key,
+<i>162</i>&nbsp;     * or &lt;tt&gt;null&lt;/tt&gt; if the map contained no mapping for the key.
+<i>163</i>&nbsp;     * &lt;p/&gt;
+<i>164</i>&nbsp;     * &lt;p&gt;If this map permits null values, then a return value of
+<i>165</i>&nbsp;     * &lt;tt&gt;null&lt;/tt&gt; does not &lt;i&gt;necessarily&lt;/i&gt; indicate that the map
+<i>166</i>&nbsp;     * contained no mapping for the key; it&#39;s also possible that the map
+<i>167</i>&nbsp;     * explicitly mapped the key to &lt;tt&gt;null&lt;/tt&gt;.
+<i>168</i>&nbsp;     * &lt;p/&gt;
+<i>169</i>&nbsp;     * &lt;p&gt;The map will not contain a mapping for the specified key once the
+<i>170</i>&nbsp;     * call returns.
+<i>171</i>&nbsp;     *
+<i>172</i>&nbsp;     * @param key key whose mapping is to be removed from the map
+<i>173</i>&nbsp;     * @return the previous value associated with &lt;tt&gt;key&lt;/tt&gt;, or
+<i>174</i>&nbsp;     * &lt;tt&gt;null&lt;/tt&gt; if there was no mapping for &lt;tt&gt;key&lt;/tt&gt;.
+<i>175</i>&nbsp;     * @throws UnsupportedOperationException if the &lt;tt&gt;remove&lt;/tt&gt; operation
+<i>176</i>&nbsp;     *                                       is not supported by this map
+<i>177</i>&nbsp;     * @throws ClassCastException            if the key is of an inappropriate type for
+<i>178</i>&nbsp;     *                                       this map
+<i>179</i>&nbsp;     *                                       (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>180</i>&nbsp;     * @throws NullPointerException          if the specified key is null and this
+<i>181</i>&nbsp;     *                                       map does not permit null keys
+<i>182</i>&nbsp;     *                                       (&lt;a href=&quot;Collection.html#optional-restrictions&quot;&gt;optional&lt;/a&gt;)
+<i>183</i>&nbsp;     */
+<i>184</i>&nbsp;    @Override
+<i>185</i>&nbsp;    public V remove(Object key) {
+<b class="nc"><i>186</i>&nbsp;        return null;</b>
+<i>187</i>&nbsp;    }
+<i>188</i>&nbsp;
+<i>189</i>&nbsp;    /**
+<i>190</i>&nbsp;     * Copies all of the mappings from the specified map to this map
+<i>191</i>&nbsp;     * (optional operation).  The effect of this call is equivalent to that
+<i>192</i>&nbsp;     * of calling {@link #put(Object, Object) put(k, v)} on this map once
+<i>193</i>&nbsp;     * for each mapping from key &lt;tt&gt;k&lt;/tt&gt; to value &lt;tt&gt;v&lt;/tt&gt; in the
+<i>194</i>&nbsp;     * specified map.  The behavior of this operation is undefined if the
+<i>195</i>&nbsp;     * specified map is modified while the operation is in progress.
+<i>196</i>&nbsp;     *
+<i>197</i>&nbsp;     * @param m mappings to be stored in this map
+<i>198</i>&nbsp;     * @throws UnsupportedOperationException if the &lt;tt&gt;putAll&lt;/tt&gt; operation
+<i>199</i>&nbsp;     *                                       is not supported by this map
+<i>200</i>&nbsp;     * @throws ClassCastException            if the class of a key or value in the
+<i>201</i>&nbsp;     *                                       specified map prevents it from being stored in this map
+<i>202</i>&nbsp;     * @throws NullPointerException          if the specified map is null, or if
+<i>203</i>&nbsp;     *                                       this map does not permit null keys or values, and the
+<i>204</i>&nbsp;     *                                       specified map contains null keys or values
+<i>205</i>&nbsp;     * @throws IllegalArgumentException      if some property of a key or value in
+<i>206</i>&nbsp;     *                                       the specified map prevents it from being stored in this map
+<i>207</i>&nbsp;     */
+<i>208</i>&nbsp;    @Override
+<i>209</i>&nbsp;    public void putAll(Map&lt;? extends K, ? extends V&gt; m) {
+<i>210</i>&nbsp;
+<b class="nc"><i>211</i>&nbsp;    }</b>
+<i>212</i>&nbsp;
+<i>213</i>&nbsp;    /**
+<i>214</i>&nbsp;     * Removes all of the mappings from this map (optional operation).
+<i>215</i>&nbsp;     * The map will be empty after this call returns.
+<i>216</i>&nbsp;     *
+<i>217</i>&nbsp;     * @throws UnsupportedOperationException if the &lt;tt&gt;clear&lt;/tt&gt; operation
+<i>218</i>&nbsp;     *                                       is not supported by this map
+<i>219</i>&nbsp;     */
+<i>220</i>&nbsp;    @Override
+<i>221</i>&nbsp;    public void clear() {
+<i>222</i>&nbsp;
+<b class="nc"><i>223</i>&nbsp;    }</b>
+<i>224</i>&nbsp;
+<i>225</i>&nbsp;    /**
+<i>226</i>&nbsp;     * Returns a {@link Set} view of the keys contained in this map.
+<i>227</i>&nbsp;     * The set is backed by the map, so changes to the map are
+<i>228</i>&nbsp;     * reflected in the set, and vice-versa.  If the map is modified
+<i>229</i>&nbsp;     * while an iteration over the set is in progress (except through
+<i>230</i>&nbsp;     * the iterator&#39;s own &lt;tt&gt;remove&lt;/tt&gt; operation), the results of
+<i>231</i>&nbsp;     * the iteration are undefined.  The set supports element removal,
+<i>232</i>&nbsp;     * which removes the corresponding mapping from the map, via the
+<i>233</i>&nbsp;     * &lt;tt&gt;Iterator.remove&lt;/tt&gt;, &lt;tt&gt;Set.remove&lt;/tt&gt;,
+<i>234</i>&nbsp;     * &lt;tt&gt;removeAll&lt;/tt&gt;, &lt;tt&gt;retainAll&lt;/tt&gt;, and &lt;tt&gt;clear&lt;/tt&gt;
+<i>235</i>&nbsp;     * operations.  It does not support the &lt;tt&gt;add&lt;/tt&gt; or &lt;tt&gt;addAll&lt;/tt&gt;
+<i>236</i>&nbsp;     * operations.
+<i>237</i>&nbsp;     *
+<i>238</i>&nbsp;     * @return a set view of the keys contained in this map
+<i>239</i>&nbsp;     */
+<i>240</i>&nbsp;    @Override
+<i>241</i>&nbsp;    public Set&lt;K&gt; keySet() {
+<b class="nc"><i>242</i>&nbsp;        return null;</b>
+<i>243</i>&nbsp;    }
+<i>244</i>&nbsp;
+<i>245</i>&nbsp;    /**
+<i>246</i>&nbsp;     * Returns a {@link Collection} view of the values contained in this map.
+<i>247</i>&nbsp;     * The collection is backed by the map, so changes to the map are
+<i>248</i>&nbsp;     * reflected in the collection, and vice-versa.  If the map is
+<i>249</i>&nbsp;     * modified while an iteration over the collection is in progress
+<i>250</i>&nbsp;     * (except through the iterator&#39;s own &lt;tt&gt;remove&lt;/tt&gt; operation),
+<i>251</i>&nbsp;     * the results of the iteration are undefined.  The collection
+<i>252</i>&nbsp;     * supports element removal, which removes the corresponding
+<i>253</i>&nbsp;     * mapping from the map, via the &lt;tt&gt;Iterator.remove&lt;/tt&gt;,
+<i>254</i>&nbsp;     * &lt;tt&gt;Collection.remove&lt;/tt&gt;, &lt;tt&gt;removeAll&lt;/tt&gt;,
+<i>255</i>&nbsp;     * &lt;tt&gt;retainAll&lt;/tt&gt; and &lt;tt&gt;clear&lt;/tt&gt; operations.  It does not
+<i>256</i>&nbsp;     * support the &lt;tt&gt;add&lt;/tt&gt; or &lt;tt&gt;addAll&lt;/tt&gt; operations.
+<i>257</i>&nbsp;     *
+<i>258</i>&nbsp;     * @return a collection view of the values contained in this map
+<i>259</i>&nbsp;     */
+<i>260</i>&nbsp;    @Override
+<i>261</i>&nbsp;    public Collection&lt;V&gt; values() {
+<b class="nc"><i>262</i>&nbsp;        return null;</b>
+<i>263</i>&nbsp;    }
+<i>264</i>&nbsp;
+<i>265</i>&nbsp;    /**
+<i>266</i>&nbsp;     * Returns a {@link Set} view of the mappings contained in this map.
+<i>267</i>&nbsp;     * The set is backed by the map, so changes to the map are
+<i>268</i>&nbsp;     * reflected in the set, and vice-versa.  If the map is modified
+<i>269</i>&nbsp;     * while an iteration over the set is in progress (except through
+<i>270</i>&nbsp;     * the iterator&#39;s own &lt;tt&gt;remove&lt;/tt&gt; operation, or through the
+<i>271</i>&nbsp;     * &lt;tt&gt;setValue&lt;/tt&gt; operation on a map entry returned by the
+<i>272</i>&nbsp;     * iterator) the results of the iteration are undefined.  The set
+<i>273</i>&nbsp;     * supports element removal, which removes the corresponding
+<i>274</i>&nbsp;     * mapping from the map, via the &lt;tt&gt;Iterator.remove&lt;/tt&gt;,
+<i>275</i>&nbsp;     * &lt;tt&gt;Set.remove&lt;/tt&gt;, &lt;tt&gt;removeAll&lt;/tt&gt;, &lt;tt&gt;retainAll&lt;/tt&gt; and
+<i>276</i>&nbsp;     * &lt;tt&gt;clear&lt;/tt&gt; operations.  It does not support the
+<i>277</i>&nbsp;     * &lt;tt&gt;add&lt;/tt&gt; or &lt;tt&gt;addAll&lt;/tt&gt; operations.
+<i>278</i>&nbsp;     *
+<i>279</i>&nbsp;     * @return a set view of the mappings contained in this map
+<i>280</i>&nbsp;     */
+<i>281</i>&nbsp;    @Override
+<i>282</i>&nbsp;    public Set&lt;Map.Entry&lt;K, V&gt;&gt; entrySet() {
+<b class="nc"><i>283</i>&nbsp;        return null;</b>
+<i>284</i>&nbsp;    }
+<i>285</i>&nbsp;
+<i>286</i>&nbsp;    @Override
+<i>287</i>&nbsp;    public List&lt;V&gt; getLast(int n) {
+<b class="fc"><i>288</i>&nbsp;        List&lt;V&gt; list = new ArrayList&lt;V&gt;();</b>
+<b class="fc"><i>289</i>&nbsp;        if (head == null) {</b>
+<b class="nc"><i>290</i>&nbsp;            return list;</b>
+<i>291</i>&nbsp;        }
+<b class="fc"><i>292</i>&nbsp;        Entry iter = head;</b>
+<b class="fc"><i>293</i>&nbsp;        for (int i = 1; (i &lt;= n) &amp;&amp; (i &lt;= size); i++) {</b>
+<b class="fc"><i>294</i>&nbsp;            list.add(iter.getValue());</b>
+<i>295</i>&nbsp;            try {
+<b class="fc"><i>296</i>&nbsp;                iter = iter.getNext();</b>
+<b class="nc"><i>297</i>&nbsp;            } catch (Exception e) {</b>
+<b class="nc"><i>298</i>&nbsp;                e.printStackTrace();</b>
+<b class="fc"><i>299</i>&nbsp;            }</b>
+<i>300</i>&nbsp;        }
+<b class="fc"><i>301</i>&nbsp;        Collections.reverse(list);</b>
+<b class="fc"><i>302</i>&nbsp;        return list;</b>
+<i>303</i>&nbsp;    }
+<i>304</i>&nbsp;
+<i>305</i>&nbsp;    private int hash(Object key) {
+<b class="fc"><i>306</i>&nbsp;        return key.hashCode() % BIN_COUNT;</b>
+<i>307</i>&nbsp;    }
+<i>308</i>&nbsp;
+<b class="fc"><i>309</i>&nbsp;    class Entry {</b>
+<i>310</i>&nbsp;        private final K key;
+<i>311</i>&nbsp;        private V value;
+<b class="fc"><i>312</i>&nbsp;        private Entry previous = null;</b>
+<b class="fc"><i>313</i>&nbsp;        private Entry next = null;</b>
+<i>314</i>&nbsp;
+<b class="fc"><i>315</i>&nbsp;        public Entry(K key, V value, Entry next, Entry previous) {</b>
+<b class="fc"><i>316</i>&nbsp;            this.key = key;</b>
+<b class="fc"><i>317</i>&nbsp;            this.value = value;</b>
+<b class="fc"><i>318</i>&nbsp;            this.next = next;</b>
+<b class="fc"><i>319</i>&nbsp;            this.previous = previous;</b>
+<b class="fc"><i>320</i>&nbsp;        }</b>
+<i>321</i>&nbsp;
+<i>322</i>&nbsp;        @Override
+<i>323</i>&nbsp;        public String toString() {
+<b class="nc"><i>324</i>&nbsp;            return &quot;{key: &quot; + key + &quot;} {value: &quot; + value + &quot;}&quot;;</b>
+<i>325</i>&nbsp;        }
+<i>326</i>&nbsp;
+<i>327</i>&nbsp;        public Entry getNext() {
+<b class="fc"><i>328</i>&nbsp;            return next;</b>
+<i>329</i>&nbsp;        }
+<i>330</i>&nbsp;
+<i>331</i>&nbsp;        public void setNext(Entry next) {
+<b class="fc"><i>332</i>&nbsp;            this.next = next;</b>
+<b class="fc"><i>333</i>&nbsp;        }</b>
+<i>334</i>&nbsp;
+<i>335</i>&nbsp;        public K getKey() {
+<b class="fc"><i>336</i>&nbsp;            return key;</b>
+<i>337</i>&nbsp;        }
+<i>338</i>&nbsp;
+<i>339</i>&nbsp;        public V getValue() {
+<b class="fc"><i>340</i>&nbsp;            return value;</b>
+<i>341</i>&nbsp;        }
+<i>342</i>&nbsp;
+<i>343</i>&nbsp;        public void setValue(V value) {
+<b class="fc"><i>344</i>&nbsp;            this.value = value;</b>
+<b class="fc"><i>345</i>&nbsp;        }</b>
+<i>346</i>&nbsp;
+<i>347</i>&nbsp;        public Entry getPrevious() {
+<b class="fc"><i>348</i>&nbsp;            return previous;</b>
+<i>349</i>&nbsp;        }
+<i>350</i>&nbsp;
+<i>351</i>&nbsp;        public void setPrevious(Entry previous) {
+<b class="fc"><i>352</i>&nbsp;            this.previous = previous;</b>
+<b class="fc"><i>353</i>&nbsp;        }</b>
+<i>354</i>&nbsp;
+<i>355</i>&nbsp;
+<i>356</i>&nbsp;    }
+<i>357</i>&nbsp;
+<i>358</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2015-04-02 17:57</div>
+</div>
+</body>
+</html>
