@@ -110,6 +110,13 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public V get(Object key) {
+        int index = hash(key);
+        while (entries[index] != null && index < BIN_COUNT) {
+            if (((Entry) entries[index]).getKey().equals(key)) {
+                return ((Entry) entries[index]).getValue();
+            }
+            index++;
+        }
         return null;
     }
 
