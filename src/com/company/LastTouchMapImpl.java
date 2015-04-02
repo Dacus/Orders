@@ -232,8 +232,8 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
     @Override
     public void clear() {
         head = null;
-        entries = null;
-        entries = new Object[BIN_COUNT];
+        Arrays.fill(entries, null);
+        size = 0;
     }
 
     /**
@@ -253,6 +253,12 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public Set<K> keySet() {
+//        if (keySet != null) {
+//            return keySet;
+//        } else {
+//            return keySet = new KeySet();
+//        }
+//
         Set<K> keys = new LinkedHashSet<>();
         Entry entry = head;
         while (entry.getNext() != null) {

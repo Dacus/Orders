@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java" line="994" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="39433e9c-cb1d-4a3f-84e9-ec751eab7891" name="Default" comment="Implement Clear&#10;">
+    <list default="true" id="39433e9c-cb1d-4a3f-84e9-ec751eab7891" name="Default" comment="Implement keySet&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl$Entry.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl$Entry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImplTest.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/MyLastTouchMapTest.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/MyLastTouchMapTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" afterPath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java" afterPath="$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java" afterPath="$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Orders.iws" />
@@ -36,11 +42,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="734" column="33" selection-start-line="734" selection-start-column="33" selection-end-line="734" selection-end-column="33" />
+              <folding>
+                <element signature="e#17451#17452#0" expanded="true" />
+                <element signature="e#17495#17496#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LastTouchMapImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.19653179">
-              <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.67096776">
+              <caret line="234" column="35" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="318" column="29" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="312" column="11" selection-start-line="312" selection-start-column="11" selection-end-line="312" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LastTouchMapImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -66,9 +115,9 @@
         <option value="$PROJECT_DIR$/src/com/company/MainTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/LastTouchMap.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
         <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
       </list>
     </option>
   </component>
@@ -499,35 +548,41 @@
       <option name="project" value="LOCAL" />
       <updated>1427988220994</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement keySet&#10;">
+      <created>1427989444101</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1427989444101</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22857143" sideWeight="0.5050505" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249309" sideWeight="0.51145834" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783705" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991913" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959569" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249309" sideWeight="0.48854166" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22857143" sideWeight="0.4949495" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32783705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22830293" sideWeight="0.48958334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35208333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -578,7 +633,8 @@
     <MESSAGE value="Implemented Get" />
     <MESSAGE value="Fixed Contains Value" />
     <MESSAGE value="Implement Clear&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Clear&#10;" />
+    <MESSAGE value="Implement keySet&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement keySet&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -588,7 +644,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -597,32 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -645,8 +675,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" { " />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" }" />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" }" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
@@ -740,8 +770,8 @@
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
             <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" { " />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" }" />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" }" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
@@ -952,51 +982,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="346" column="5" selection-start-line="346" selection-start-column="5" selection-end-line="346" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Orders.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33300972">
-          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
-          <folding>
-            <marker date="1420741190000" expanded="false" signature="-1:-1" placeholder="/.../" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,16 +998,6 @@
             <marker date="1427987565997" expanded="false" signature="-1:-1" placeholder="..." />
             <marker date="1427987565997" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427987565997" expanded="false" signature="-1:-1" placeholder="&lt;~&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20809248">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1427987566425" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1312,29 +1292,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java">
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8179191">
-          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.280543">
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
           <folding>
-            <marker date="1427989407662" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427989407662" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427989407662" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427989407662" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427989407662" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427989407662" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1420741190000" expanded="false" signature="-1:-1" placeholder="/.../" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1420741190000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21719457">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1427987566425" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76589596">
+        <state vertical-scroll-proportion="0.7662142">
           <caret line="197" column="35" selection-start-line="197" selection-start-column="35" selection-end-line="197" selection-end-column="35" />
           <folding>
             <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" { " />
-            <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder=" }" />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1427989407666" expanded="false" signature="-1:-1" placeholder=" }" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1427989407666" expanded="true" signature="-1:-1" placeholder="{...}" />
@@ -1354,10 +1348,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="318" column="29" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/EnumMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.387096">
+          <caret line="545" column="23" selection-start-line="545" selection-start-column="23" selection-end-line="545" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="312" column="11" selection-start-line="312" selection-start-column="11" selection-end-line="312" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="734" column="33" selection-start-line="734" selection-start-column="33" selection-end-line="734" selection-end-column="33" />
+          <folding>
+            <element signature="e#17451#17452#0" expanded="true" />
+            <element signature="e#17495#17496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19653179">
-          <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.67096776">
+          <caret line="234" column="35" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
           <folding />
         </state>
       </provider>
