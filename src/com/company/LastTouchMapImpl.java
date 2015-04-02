@@ -45,6 +45,13 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public boolean containsKey(Object key) {
+        int index = hash(key);
+        while (entries[index] != null && index < BIN_COUNT) {
+            if (((Entry) entries[index]).getKey() == key) {
+                return true;
+            }
+            index++;
+        }
         return false;
     }
 
@@ -68,6 +75,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public boolean containsValue(Object value) {
+
         return false;
     }
 
@@ -294,19 +302,8 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return list;
     }
 
-    private int hash(K key) {
+    private int hash(Object key) {
         return key.hashCode() % BIN_COUNT;
-    }
-
-    Entry findEntry(K key) {
-        int index = hash(key);
-        while (entries[index] != null && index < BIN_COUNT) {
-            if (((Entry) entries[index]).getKey() == key) {
-                return (Entry) entries[index];
-            }
-            index++;
-        }
-        return null;
     }
 
     class Entry {
