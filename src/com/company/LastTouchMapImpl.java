@@ -253,7 +253,14 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public Set<K> keySet() {
-        return null;
+        Set<K> keys = new LinkedHashSet<>();
+        Entry entry = head;
+        while (entry.getNext() != null) {
+            keys.add(entry.getKey());
+            entry = entry.getNext();
+        }
+        keys.add(entry.getKey());
+        return keys;
     }
 
     /**

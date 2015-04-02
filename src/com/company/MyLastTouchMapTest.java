@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Set;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
@@ -167,5 +168,33 @@ public class MyLastTouchMapTest {
         list.put(3, "m3");
         boolean a = list.containsKey(10);
         assertThat(a, is(false));
+    }
+
+    @Test
+    public void testKeySet() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m4");
+        list.put(3, "m3");
+        Set<Integer> keys = list.keySet();
+        assertThat(keys, contains(3, 4, 5, 2, 1));
+    }
+
+    @Test
+    public void testClear() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m4");
+        list.put(3, "m3");
+        list.clear();
+        assertTrue(list.isEmpty());
     }
 }

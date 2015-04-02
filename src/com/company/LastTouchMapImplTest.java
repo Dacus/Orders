@@ -36,7 +36,7 @@ public class LastTouchMapImplTest {
         list.put(3,"Cosmin");
         list.put(2,"Gelu");
         List<String> l = list.getLast(3);
-        assertThat(l, contains("Gelu","Cosmin","Alex"));
+        assertThat(l, contains("Gelu", "Cosmin", "Alex"));
     }
 
     @Test
