@@ -47,7 +47,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
     public boolean containsKey(Object key) {
         int index = hash(key);
         while (entries[index] != null && index < BIN_COUNT) {
-            if (((Entry) entries[index]).getKey() == key) {
+            if (((Entry) entries[index]).getKey().equals(key)) {
                 return true;
             }
             index++;
