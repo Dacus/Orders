@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -72,6 +73,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                 e.printStackTrace();
             }
         }
+        Collections.reverse(list);
         return list;
     }
 
@@ -79,7 +81,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return key.hashCode() % BIN_COUNT;
     }
 
-    public Entry findEntry(K key) {
+    Entry findEntry(K key) {
         int index = hash(key);
         while (entries[index] != null && index < BIN_COUNT) {
             if (((Entry) entries[index]).getKey() == key) {
@@ -90,7 +92,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return null;
     }
 
-    private class Entry {
+     class Entry {
         private final K key;
         private V value;
         private Entry previous = null;

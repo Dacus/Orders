@@ -46,6 +46,6 @@ public class LastTouchMapImplTest {
         list.put(2,"Andi");
         list.put(3,"Cosmin");
         list.put(2,"Gelu");
-//        assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
+ //       assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
     }
 }
