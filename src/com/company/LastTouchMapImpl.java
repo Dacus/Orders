@@ -75,8 +75,12 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public boolean containsValue(Object value) {
-
+        Entry entry = head;
+        while (entry.getNext() != null) {
+            if (entry.getValue().equals(value)) return true;
+        }
         return false;
+
     }
 
     /**
