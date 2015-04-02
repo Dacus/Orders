@@ -78,6 +78,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         Entry entry = head;
         while (entry.getNext() != null) {
             if (entry.getValue().equals(value)) return true;
+            entry = entry.getNext();
         }
         return false;
 
@@ -230,7 +231,11 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public void clear() {
-
+        Entry entry = head;
+        while (entry.getNext() != null) {
+            if (entry.getValue().equals(value)) return true;
+        }
+        head = null;
     }
 
     /**
