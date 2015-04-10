@@ -197,4 +197,38 @@ public class MyLastTouchMapTest {
         list.clear();
         assertTrue(list.isEmpty());
     }
+
+    @Test
+    public void testRemove() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m6");
+        list.put(3, "m3");
+        list.put(1, "m7");
+        String a = list.remove(3);
+        assertThat(a, is("m3"));
+        List<String> l = list.getLast(3);
+        assertThat(l, contains("m5", "m6", "m7"));
+
+    }
+
+    @Test
+    public void testClear1() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(1, "m1");
+        list.put(2, "m2");
+        list.put(3, "m3");
+        list.put(4, "m4");
+        list.put(5, "m5");
+        list.put(4, "m6");
+        list.put(3, "m3");
+        list.put(1, "m7");
+        list.clear();
+        assertThat(list.isEmpty(),is(true));
+    }
 }
+

@@ -1,5 +1,7 @@
 package com.company;
 
+import sun.org.mozilla.javascript.ast.WhileLoop;
+
 import java.util.*;
 
 
@@ -137,6 +139,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                     entry.setNext(head);
                     head.setPrevious(entry);
                     head = entry;
+                    head.setPrevious(null);
                     return value;
                 }
             }
@@ -146,6 +149,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                 entry.setNext(head);
                 head.setPrevious(entry);
                 head = entry;
+                head.setPrevious(null);
                 return value;
             }
             return value;
@@ -195,6 +199,29 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public V remove(Object key) {
+        int index = hash(key);
+        while (entries[index] != null && index < BIN_COUNT) {
+            if (((Entry) entries[index]).getKey().equals(key)) {
+                Entry entry = (Entry) entries[index];
+
+                if (entry.getNext() != null && entry.getPrevious() != null) {
+                    entry.getNext().setPrevious(entry.getPrevious());
+                    entry.getPrevious().setNext(entry.getNext());
+                } else if (entry.getNext() != null) {
+                    entry.getNext().setPrevious(null);
+                    head = entry.getNext();
+                } else if (entry.getPrevious() != null) {
+                    entry.getPrevious().setNext(null);
+                } else {
+                    head = null;
+                }
+
+                V value = entry.getValue();
+                entries[index] = null;
+                return value;
+            }
+            index++;
+        }
         return null;
     }
 
@@ -219,7 +246,12 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public void putAll(Map<? extends K, ? extends V> m) {
+        int numKeysToBeAdded = m.size();
+        if (numKeysToBeAdded == 0)
+            return;
 
+        for (Map.Entry<? extends K, ? extends V> e : m.entrySet())
+            put(e.getKey(), e.getValue());
     }
 
     /**
@@ -231,9 +263,19 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public void clear() {
+        if (head == null) return;
+
+        while (head.getNext() != null) {
+            head.getNext().setPrevious(null);
+            Entry entry = head;
+            head = entry.getNext();
+            entry.setNext(null);
+        }
+
         head = null;
         Arrays.fill(entries, null);
         size = 0;
+
     }
 
     /**
@@ -252,7 +294,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      * @return a set view of the keys contained in this map
      */
     @Override
-    public Set<K> keySet() {
+    public Set<K> keySet() { //TODO
 //        if (keySet != null) {
 //            return keySet;
 //        } else {
@@ -285,7 +327,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      * @return a collection view of the values contained in this map
      */
     @Override
-    public Collection<V> values() {
+    public Collection<V> values() { //TODO
         return null;
     }
 
@@ -306,7 +348,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      * @return a set view of the mappings contained in this map
      */
     @Override
-    public Set<Map.Entry<K, V>> entrySet() {
+    public Set<Map.Entry<K, V>> entrySet() { //TODO
         return null;
     }
 

@@ -15,11 +15,12 @@ public class LastTouchMapImplTest {
         LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
         assertEquals(list.size(), 0);
     }
+
     @Test
     public void testSizeTwo() throws Exception {
         LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
-        list.put(1,"ceva");
-        list.put(2,"altceva");
+        list.put(1, "ceva");
+        list.put(2, "altceva");
         assertEquals(list.size(), 2);
     }
 
@@ -31,10 +32,10 @@ public class LastTouchMapImplTest {
     @Test
     public void testGetLast() throws Exception {
         LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
-        list.put(10,"Alex");
-        list.put(2,"Andi");
-        list.put(3,"Cosmin");
-        list.put(2,"Gelu");
+        list.put(10, "Alex");
+        list.put(2, "Andi");
+        list.put(3, "Cosmin");
+        list.put(2, "Gelu");
         List<String> l = list.getLast(3);
         assertThat(l, contains("Gelu", "Cosmin", "Alex"));
     }
@@ -42,12 +43,24 @@ public class LastTouchMapImplTest {
     @Test
     public void testFindEntry() throws Exception {
         LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
-        list.put(10,"Alex");
-        list.put(2,"Andi");
-        list.put(3,"Cosmin");
+        list.put(10, "Alex");
+        list.put(2, "Andi");
+        list.put(3, "Cosmin");
         list.put(2, "Gelu");
- //       assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
+        //       assertThat(((LastTouchMapImpl.Entry)list.findEntry(2)).toString(), contains(""));
+    }
+
+
+    @Test
+    public void testClear() throws Exception {
+        LastTouchMapImpl<Integer, String> list = new LastTouchMapImpl<>();
+        list.put(10, "Alex");
+        list.put(2, "Andi");
+        list.put(3, "Cosmin");
+        list.put(2, "Gelu");
+        list.clear();
     }
 
 
 }
+
