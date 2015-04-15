@@ -6,9 +6,27 @@ import java.util.*;
 public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private static final int BIN_COUNT = 1000;
+    /**
+     * Returns a {@link Set} view of the keys contained in this map.
+     * The set is backed by the map, so changes to the map are
+     * reflected in the set, and vice-versa.  If the map is modified
+     * while an iteration over the set is in progress (except through
+     * the iterator's own <tt>remove</tt> operation), the results of
+     * the iteration are undefined.  The set supports element removal,
+     * which removes the corresponding mapping from the map, via the
+     * <tt>Iterator.remove</tt>, <tt>Set.remove</tt>,
+     * <tt>removeAll</tt>, <tt>retainAll</tt>, and <tt>clear</tt>
+     * operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
+     * operations.
+     *
+     * @return a set view of the keys contained in this map
+     */
+    Set<K> keySet = null;
     private Object[] entries = new Object[BIN_COUNT];
     private int size = 0;
     private Entry head = null;
+    private Collection<V> valueCollection = null;
+
     /**
      * Returns a {@link Collection} view of the values contained in this map.
      * The collection is backed by the map, so changes to the map are
@@ -25,7 +43,6 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      * @return a collection view of the values contained in this map
      */
 
-    private Collection<V> valueCollection = null;
 
     @Override
     public int size() {
@@ -293,25 +310,10 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     }
 
-    /**
-     * Returns a {@link Set} view of the keys contained in this map.
-     * The set is backed by the map, so changes to the map are
-     * reflected in the set, and vice-versa.  If the map is modified
-     * while an iteration over the set is in progress (except through
-     * the iterator's own <tt>remove</tt> operation), the results of
-     * the iteration are undefined.  The set supports element removal,
-     * which removes the corresponding mapping from the map, via the
-     * <tt>Iterator.remove</tt>, <tt>Set.remove</tt>,
-     * <tt>removeAll</tt>, <tt>retainAll</tt>, and <tt>clear</tt>
-     * operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
-     * operations.
-     *
-     * @return a set view of the keys contained in this map
-     */
     @Override
     public Set<K> keySet() { //TODO
-
-        return null;
+        Set<K> ks = keySet;
+        return (ks != null ? ks : (keySet = new KeySet()));
     }
 
     @Override
@@ -364,7 +366,47 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return key.hashCode() % BIN_COUNT;
     }
 
-    private abstract class HashIterator implements Iterator {
+    private final class KeySet extends AbstractSet<K> {
+        public Iterator<K> iterator() {
+            return new KeyIterator();
+        }
+
+        public int size() {
+            return size;
+        }
+
+        public boolean contains(Object o) {
+            return containsKey(o);
+        }
+
+        public boolean remove(Object o) {
+            return LastTouchMapImpl.this.remove(o) != null;
+        }
+
+        public void clear() {
+            LastTouchMapImpl.this.clear();
+        }
+    }
+
+    private final class Values extends AbstractCollection<V> {
+        public Iterator<V> iterator() {
+            return new ValueIterator();
+        }
+
+        public int size() {
+            return size;
+        }
+
+        public boolean contains(Object o) {
+            return containsValue(o);
+        }
+
+        public void clear() {
+            LastTouchMapImpl.this.clear();
+        }
+    }
+
+    private abstract class HashIterator<E> implements Iterator<E> {
         Entry next;
         Entry current;
 
@@ -396,27 +438,15 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     }
 
-    private final class ValueIterator extends HashIterator {
+    private final class ValueIterator extends HashIterator<V> {
         public V next() {
             return nextEntry().value;
         }
     }
 
-    private final class Values extends AbstractCollection<V> {
-        public Iterator<V> iterator() {
-            return new ValueIterator();
-        }
-
-        public int size() {
-            return size;
-        }
-
-        public boolean contains(Object o) {
-            return containsValue(o);
-        }
-
-        public void clear() {
-            LastTouchMapImpl.this.clear();
+    private final class KeyIterator extends HashIterator<K> {
+        public K next() {
+            return nextEntry().getKey();
         }
     }
 

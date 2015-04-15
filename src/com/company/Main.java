@@ -1,8 +1,8 @@
 package com.company;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 
 public class Main {
 
@@ -14,7 +14,7 @@ public class Main {
         a.put(4, "m4");
         a.put(5, "m5");
         a.put(6, "m6");
-        Collection<String> b = a.values();
+        Set<Integer> b = a.keySet();
         System.out.println(b);
 
         for (Iterator i = b.iterator(); i.hasNext(); ) {
