@@ -311,7 +311,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
     }
 
     @Override
-    public Set<K> keySet() { //TODO
+    public Set<K> keySet() {
         Set<K> ks = keySet;
         return (ks != null ? ks : (keySet = new KeySet()));
     }

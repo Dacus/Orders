@@ -33,7 +33,7 @@ public class Main {
         a.put(6, "m6");
 
 
-        System.out.println(b);
+        System.out.println(b.contains(10));
 
         b.clear();
 
