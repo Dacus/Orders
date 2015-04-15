@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39433e9c-cb1d-4a3f-84e9-ec751eab7891" name="Default" comment="Moved tests to separate folder &#10;&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImplTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/MyLastTouchMapTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl$Entry.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl$Entry.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl.class" afterPath="$PROJECT_DIR$/out/production/Orders/com/company/LastTouchMapImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" afterPath="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/com/company/LastTouchMapImplTest.java" afterPath="$PROJECT_DIR$/Test/com/company/LastTouchMapImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/com/company/MyLastTouchMapTest.java" afterPath="$PROJECT_DIR$/Test/com/company/MyLastTouchMapTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Orders.iws" />
@@ -47,12 +41,9 @@
       <file leaf-file-name="LastTouchMapImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.883446">
-              <caret line="391" column="22" selection-start-line="391" selection-start-column="22" selection-end-line="391" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7314189">
+              <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
                 <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
                 <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
                 <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
@@ -60,46 +51,43 @@
                 <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
                 <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
                 <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-                <element signature="e#15759#15760#0" expanded="true" />
-                <element signature="e#15833#15834#0" expanded="true" />
-                <element signature="e#15867#15868#0" expanded="true" />
-                <element signature="e#15902#15903#0" expanded="true" />
-                <element signature="e#15945#15946#0" expanded="true" />
-                <element signature="e#15985#15986#0" expanded="true" />
-                <element signature="e#16079#16080#0" expanded="true" />
-                <element signature="e#16115#16116#0" expanded="true" />
-                <element signature="e#16156#16157#0" expanded="true" />
-                <element signature="e#16198#16199#0" expanded="true" />
-                <element signature="e#16236#16237#0" expanded="true" />
-                <element signature="e#16275#16276#0" expanded="true" />
-                <element signature="e#16326#16327#0" expanded="true" />
-                <element signature="e#16374#16375#0" expanded="true" />
+                <element signature="e#11900#11901#0" expanded="true" />
+                <element signature="e#11943#11944#0" expanded="true" />
+                <element signature="e#12407#12408#0" expanded="true" />
+                <element signature="e#12455#12456#0" expanded="true" />
+                <element signature="e#15680#15681#0" expanded="true" />
+                <element signature="e#15714#15715#0" expanded="true" />
+                <element signature="e#16245#16246#0" expanded="true" />
+                <element signature="e#16294#16295#0" expanded="true" />
+                <element signature="e#16701#16702#0" expanded="true" />
+                <element signature="e#16775#16776#0" expanded="true" />
+                <element signature="e#16809#16810#0" expanded="true" />
+                <element signature="e#16844#16845#0" expanded="true" />
+                <element signature="e#16887#16888#0" expanded="true" />
+                <element signature="e#16927#16928#0" expanded="true" />
+                <element signature="e#16956#16957#0" expanded="true" />
+                <element signature="e#16990#16991#0" expanded="true" />
+                <element signature="e#17021#17022#0" expanded="true" />
+                <element signature="e#17057#17058#0" expanded="true" />
+                <element signature="e#17098#17099#0" expanded="true" />
+                <element signature="e#17140#17141#0" expanded="true" />
+                <element signature="e#17178#17179#0" expanded="true" />
+                <element signature="e#17217#17218#0" expanded="true" />
+                <element signature="e#17268#17269#0" expanded="true" />
+                <element signature="e#17316#17317#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LastTouchMapImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/com/company/LastTouchMapImplTest.java">
+      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/lang/Object.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyLastTouchMapTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/com/company/MyLastTouchMapTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#11177#11178#0" expanded="true" />
+                <element signature="e#11260#11261#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,17 +97,30 @@
         <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="312" column="11" selection-start-line="312" selection-start-column="11" selection-end-line="312" selection-end-column="11" />
+              <caret line="475" column="8" selection-start-line="475" selection-start-column="8" selection-end-line="475" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedHashMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/LinkedHashMap.java">
+      <file leaf-file-name="TreeMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/TreeMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
+              <caret line="1158" column="17" selection-start-line="1158" selection-start-column="17" selection-end-line="1158" selection-end-column="17" />
+              <folding>
+                <element signature="e#42103#42104#0" expanded="true" />
+                <element signature="e#42151#42152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collections.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Collections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -129,30 +130,22 @@
         <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="932" column="21" selection-start-line="932" selection-start-column="21" selection-end-line="932" selection-end-column="21" />
+              <caret line="1035" column="50" selection-start-line="1035" selection-start-column="50" selection-end-line="1035" selection-end-column="50" />
               <folding>
-                <element signature="e#34075#34076#0" expanded="true" />
-                <element signature="e#34115#34116#0" expanded="true" />
-                <element signature="e#35297#35298#0" expanded="true" />
-                <element signature="e#35344#35345#0" expanded="true" />
-                <element signature="e#35372#35373#0" expanded="true" />
-                <element signature="e#35407#35408#0" expanded="true" />
-                <element signature="e#35451#35452#0" expanded="true" />
-                <element signature="e#35496#35497#0" expanded="true" />
-                <element signature="e#35538#35539#0" expanded="true" />
-                <element signature="e#35610#35611#0" expanded="true" />
-                <element signature="e#35640#35641#0" expanded="true" />
-                <element signature="e#35684#35685#0" expanded="true" />
+                <element signature="e#34154#34155#0" expanded="true" />
+                <element signature="e#34196#34197#0" expanded="true" />
+                <element signature="e#36686#36687#0" expanded="true" />
+                <element signature="e#36735#36736#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractMap.java">
+      <file leaf-file-name="AbstractCollection.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractCollection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="298" column="37" selection-start-line="298" selection-start-column="37" selection-end-line="298" selection-end-column="37" />
+              <caret line="449" column="0" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,9 +155,31 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/io/PrintStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="820" column="0" selection-start-line="820" selection-start-column="0" selection-end-line="820" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2846" column="0" selection-start-line="2846" selection-start-column="0" selection-end-line="2846" selection-end-column="0" />
+              <folding>
+                <element signature="e#114715#114716#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,10 +206,10 @@
         <option value="$PROJECT_DIR$/src/com/company/LastTouchMap.java" />
         <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImplTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/MyLastTouchMapTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
         <option value="$PROJECT_DIR$/Test/com/company/LastTouchMapImplTest.java" />
         <option value="$PROJECT_DIR$/Test/com/company/MyLastTouchMapTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java" />
       </list>
     </option>
   </component>
@@ -271,9 +286,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -292,8 +304,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -647,7 +680,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -754,22 +787,22 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32708332" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17634052" sideWeight="0.48854166" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29242676" sideWeight="0.48854166" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.053067993" sideWeight="0.48958334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1652847" sideWeight="0.48958334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35208333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991913" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -778,8 +811,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.053067993" sideWeight="0.48958334" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35208333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35208333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -835,7 +868,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="25" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -849,108 +882,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Test/com/company/MyLastTouchMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Orders.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="e#15759#15760#0" expanded="true" />
-            <element signature="e#15833#15834#0" expanded="true" />
-            <element signature="e#15867#15868#0" expanded="true" />
-            <element signature="e#15902#15903#0" expanded="true" />
-            <element signature="e#15945#15946#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16079#16080#0" expanded="true" />
-            <element signature="e#16115#16116#0" expanded="true" />
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16198#16199#0" expanded="true" />
-            <element signature="e#16236#16237#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
-            <element signature="e#16326#16327#0" expanded="true" />
-            <element signature="e#16374#16375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#34075#34076#0" expanded="true" />
-            <element signature="e#34115#34116#0" expanded="true" />
-            <element signature="e#35297#35298#0" expanded="true" />
-            <element signature="e#35344#35345#0" expanded="true" />
-            <element signature="e#35372#35373#0" expanded="true" />
-            <element signature="e#35407#35408#0" expanded="true" />
-            <element signature="e#35451#35452#0" expanded="true" />
-            <element signature="e#35496#35497#0" expanded="true" />
-            <element signature="e#35538#35539#0" expanded="true" />
-            <element signature="e#35610#35611#0" expanded="true" />
-            <element signature="e#35640#35641#0" expanded="true" />
-            <element signature="e#35684#35685#0" expanded="true" />
+            <element signature="e#34154#34155#0" expanded="true" />
+            <element signature="e#34196#34197#0" expanded="true" />
+            <element signature="e#36686#36687#0" expanded="true" />
+            <element signature="e#36735#36736#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -966,11 +906,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,9 +933,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
             <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
@@ -1007,20 +940,30 @@
             <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="e#15759#15760#0" expanded="true" />
-            <element signature="e#15833#15834#0" expanded="true" />
-            <element signature="e#15867#15868#0" expanded="true" />
-            <element signature="e#15902#15903#0" expanded="true" />
-            <element signature="e#15945#15946#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16079#16080#0" expanded="true" />
-            <element signature="e#16115#16116#0" expanded="true" />
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16198#16199#0" expanded="true" />
-            <element signature="e#16236#16237#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
-            <element signature="e#16326#16327#0" expanded="true" />
-            <element signature="e#16374#16375#0" expanded="true" />
+            <element signature="e#11900#11901#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#12407#12408#0" expanded="true" />
+            <element signature="e#12455#12456#0" expanded="true" />
+            <element signature="e#15680#15681#0" expanded="true" />
+            <element signature="e#15714#15715#0" expanded="true" />
+            <element signature="e#16245#16246#0" expanded="true" />
+            <element signature="e#16294#16295#0" expanded="true" />
+            <element signature="e#16701#16702#0" expanded="true" />
+            <element signature="e#16775#16776#0" expanded="true" />
+            <element signature="e#16809#16810#0" expanded="true" />
+            <element signature="e#16844#16845#0" expanded="true" />
+            <element signature="e#16887#16888#0" expanded="true" />
+            <element signature="e#16927#16928#0" expanded="true" />
+            <element signature="e#16956#16957#0" expanded="true" />
+            <element signature="e#16990#16991#0" expanded="true" />
+            <element signature="e#17021#17022#0" expanded="true" />
+            <element signature="e#17057#17058#0" expanded="true" />
+            <element signature="e#17098#17099#0" expanded="true" />
+            <element signature="e#17140#17141#0" expanded="true" />
+            <element signature="e#17178#17179#0" expanded="true" />
+            <element signature="e#17217#17218#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17316#17317#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1055,9 +998,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
             <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
@@ -1065,20 +1005,30 @@
             <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="e#15759#15760#0" expanded="true" />
-            <element signature="e#15833#15834#0" expanded="true" />
-            <element signature="e#15867#15868#0" expanded="true" />
-            <element signature="e#15902#15903#0" expanded="true" />
-            <element signature="e#15945#15946#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16079#16080#0" expanded="true" />
-            <element signature="e#16115#16116#0" expanded="true" />
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16198#16199#0" expanded="true" />
-            <element signature="e#16236#16237#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
-            <element signature="e#16326#16327#0" expanded="true" />
-            <element signature="e#16374#16375#0" expanded="true" />
+            <element signature="e#11900#11901#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#12407#12408#0" expanded="true" />
+            <element signature="e#12455#12456#0" expanded="true" />
+            <element signature="e#15680#15681#0" expanded="true" />
+            <element signature="e#15714#15715#0" expanded="true" />
+            <element signature="e#16245#16246#0" expanded="true" />
+            <element signature="e#16294#16295#0" expanded="true" />
+            <element signature="e#16701#16702#0" expanded="true" />
+            <element signature="e#16775#16776#0" expanded="true" />
+            <element signature="e#16809#16810#0" expanded="true" />
+            <element signature="e#16844#16845#0" expanded="true" />
+            <element signature="e#16887#16888#0" expanded="true" />
+            <element signature="e#16927#16928#0" expanded="true" />
+            <element signature="e#16956#16957#0" expanded="true" />
+            <element signature="e#16990#16991#0" expanded="true" />
+            <element signature="e#17021#17022#0" expanded="true" />
+            <element signature="e#17057#17058#0" expanded="true" />
+            <element signature="e#17098#17099#0" expanded="true" />
+            <element signature="e#17140#17141#0" expanded="true" />
+            <element signature="e#17178#17179#0" expanded="true" />
+            <element signature="e#17217#17218#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17316#17317#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1113,9 +1063,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
             <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
@@ -1123,20 +1070,30 @@
             <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="e#15759#15760#0" expanded="true" />
-            <element signature="e#15833#15834#0" expanded="true" />
-            <element signature="e#15867#15868#0" expanded="true" />
-            <element signature="e#15902#15903#0" expanded="true" />
-            <element signature="e#15945#15946#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16079#16080#0" expanded="true" />
-            <element signature="e#16115#16116#0" expanded="true" />
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16198#16199#0" expanded="true" />
-            <element signature="e#16236#16237#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
-            <element signature="e#16326#16327#0" expanded="true" />
-            <element signature="e#16374#16375#0" expanded="true" />
+            <element signature="e#11900#11901#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#12407#12408#0" expanded="true" />
+            <element signature="e#12455#12456#0" expanded="true" />
+            <element signature="e#15680#15681#0" expanded="true" />
+            <element signature="e#15714#15715#0" expanded="true" />
+            <element signature="e#16245#16246#0" expanded="true" />
+            <element signature="e#16294#16295#0" expanded="true" />
+            <element signature="e#16701#16702#0" expanded="true" />
+            <element signature="e#16775#16776#0" expanded="true" />
+            <element signature="e#16809#16810#0" expanded="true" />
+            <element signature="e#16844#16845#0" expanded="true" />
+            <element signature="e#16887#16888#0" expanded="true" />
+            <element signature="e#16927#16928#0" expanded="true" />
+            <element signature="e#16956#16957#0" expanded="true" />
+            <element signature="e#16990#16991#0" expanded="true" />
+            <element signature="e#17021#17022#0" expanded="true" />
+            <element signature="e#17057#17058#0" expanded="true" />
+            <element signature="e#17098#17099#0" expanded="true" />
+            <element signature="e#17140#17141#0" expanded="true" />
+            <element signature="e#17178#17179#0" expanded="true" />
+            <element signature="e#17217#17218#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17316#17317#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1288,23 +1245,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="300" column="38" selection-start-line="300" selection-start-column="38" selection-end-line="300" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2594235">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="312" column="11" selection-start-line="312" selection-start-column="11" selection-end-line="312" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="e#0#20083#0" expanded="false" />
+            <element signature="e#13681#13682#0" expanded="false" />
+            <element signature="e#13734#13735#0" expanded="false" />
+            <element signature="e#14849#14850#0" expanded="false" />
+            <element signature="e#14881#14882#0" expanded="false" />
+            <element signature="e#15351#15352#0" expanded="false" />
+            <element signature="e#15401#15402#0" expanded="false" />
+            <element signature="e#20051#20052#0" expanded="false" />
+            <element signature="e#20079#20080#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,9 +1263,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,11 +1271,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1334,10 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4239865">
           <caret line="493" column="24" selection-start-line="493" selection-start-column="24" selection-end-line="493" selection-end-column="24" />
-          <folding>
-            <element signature="e#16917#16918#0" expanded="true" />
-            <element signature="e#16980#16981#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1349,53 +1290,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="jar://$PROJECT_DIR$/Lib/hamcrest-all-1.3-sources.jar!/org/hamcrest/internal/ArrayIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1158" column="17" selection-start-line="1158" selection-start-column="17" selection-end-line="1158" selection-end-column="17" />
+          <folding>
+            <element signature="e#42103#42104#0" expanded="true" />
+            <element signature="e#42151#42152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09771987">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="37" selection-start-line="298" selection-start-column="37" selection-end-line="298" selection-end-column="37" />
+          <caret line="299" column="37" selection-start-line="299" selection-start-column="37" selection-end-line="299" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="475" column="8" selection-start-line="475" selection-start-column="8" selection-end-line="475" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="820" column="0" selection-start-line="820" selection-start-column="0" selection-end-line="820" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2846" column="0" selection-start-line="2846" selection-start-column="0" selection-end-line="2846" selection-end-column="0" />
+          <folding>
+            <element signature="e#114715#114716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="449" column="0" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#11177#11178#0" expanded="true" />
+            <element signature="e#11260#11261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0-openjdk-amd64/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="932" column="21" selection-start-line="932" selection-start-column="21" selection-end-line="932" selection-end-column="21" />
+          <caret line="1035" column="50" selection-start-line="1035" selection-start-column="50" selection-end-line="1035" selection-end-column="50" />
           <folding>
-            <element signature="e#34075#34076#0" expanded="true" />
-            <element signature="e#34115#34116#0" expanded="true" />
-            <element signature="e#35297#35298#0" expanded="true" />
-            <element signature="e#35344#35345#0" expanded="true" />
-            <element signature="e#35372#35373#0" expanded="true" />
-            <element signature="e#35407#35408#0" expanded="true" />
-            <element signature="e#35451#35452#0" expanded="true" />
-            <element signature="e#35496#35497#0" expanded="true" />
-            <element signature="e#35538#35539#0" expanded="true" />
-            <element signature="e#35610#35611#0" expanded="true" />
-            <element signature="e#35640#35641#0" expanded="true" />
-            <element signature="e#35684#35685#0" expanded="true" />
+            <element signature="e#34154#34155#0" expanded="true" />
+            <element signature="e#34196#34197#0" expanded="true" />
+            <element signature="e#36686#36687#0" expanded="true" />
+            <element signature="e#36735#36736#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/LastTouchMapImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.883446">
-          <caret line="391" column="22" selection-start-line="391" selection-start-column="22" selection-end-line="391" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7314189">
+          <caret line="370" column="0" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
             <element signature="docComment;method#isEmpty#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsKey#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#containsValue#0;class#LastTouchMapImpl#0" expanded="false" />
@@ -1403,20 +1416,30 @@
             <element signature="docComment;method#remove#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#putAll#0;class#LastTouchMapImpl#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#LastTouchMapImpl#0" expanded="false" />
-            <element signature="e#15759#15760#0" expanded="true" />
-            <element signature="e#15833#15834#0" expanded="true" />
-            <element signature="e#15867#15868#0" expanded="true" />
-            <element signature="e#15902#15903#0" expanded="true" />
-            <element signature="e#15945#15946#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16079#16080#0" expanded="true" />
-            <element signature="e#16115#16116#0" expanded="true" />
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16198#16199#0" expanded="true" />
-            <element signature="e#16236#16237#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
-            <element signature="e#16326#16327#0" expanded="true" />
-            <element signature="e#16374#16375#0" expanded="true" />
+            <element signature="e#11900#11901#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#12407#12408#0" expanded="true" />
+            <element signature="e#12455#12456#0" expanded="true" />
+            <element signature="e#15680#15681#0" expanded="true" />
+            <element signature="e#15714#15715#0" expanded="true" />
+            <element signature="e#16245#16246#0" expanded="true" />
+            <element signature="e#16294#16295#0" expanded="true" />
+            <element signature="e#16701#16702#0" expanded="true" />
+            <element signature="e#16775#16776#0" expanded="true" />
+            <element signature="e#16809#16810#0" expanded="true" />
+            <element signature="e#16844#16845#0" expanded="true" />
+            <element signature="e#16887#16888#0" expanded="true" />
+            <element signature="e#16927#16928#0" expanded="true" />
+            <element signature="e#16956#16957#0" expanded="true" />
+            <element signature="e#16990#16991#0" expanded="true" />
+            <element signature="e#17021#17022#0" expanded="true" />
+            <element signature="e#17057#17058#0" expanded="true" />
+            <element signature="e#17098#17099#0" expanded="true" />
+            <element signature="e#17140#17141#0" expanded="true" />
+            <element signature="e#17178#17179#0" expanded="true" />
+            <element signature="e#17217#17218#0" expanded="true" />
+            <element signature="e#17268#17269#0" expanded="true" />
+            <element signature="e#17316#17317#0" expanded="true" />
           </folding>
         </state>
       </provider>

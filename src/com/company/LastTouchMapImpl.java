@@ -1,7 +1,5 @@
 package com.company;
 
-import sun.org.mozilla.javascript.ast.WhileLoop;
-
 import java.util.*;
 
 
@@ -11,6 +9,23 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
     private Object[] entries = new Object[BIN_COUNT];
     private int size = 0;
     private Entry head = null;
+    /**
+     * Returns a {@link Collection} view of the values contained in this map.
+     * The collection is backed by the map, so changes to the map are
+     * reflected in the collection, and vice-versa.  If the map is
+     * modified while an iteration over the collection is in progress
+     * (except through the iterator's own <tt>remove</tt> operation),
+     * the results of the iteration are undefined.  The collection
+     * supports element removal, which removes the corresponding
+     * mapping from the map, via the <tt>Iterator.remove</tt>,
+     * <tt>Collection.remove</tt>, <tt>removeAll</tt>,
+     * <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
+     * support the <tt>add</tt> or <tt>addAll</tt> operations.
+     *
+     * @return a collection view of the values contained in this map
+     */
+
+    private Collection<V> valueCollection = null;
 
     @Override
     public int size() {
@@ -295,40 +310,14 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      */
     @Override
     public Set<K> keySet() { //TODO
-//        if (keySet != null) {
-//            return keySet;
-//        } else {
-//            return keySet = new KeySet();
-//        }
-//
-        Set<K> keys = new LinkedHashSet<>();
-        Entry entry = head;
-        while (entry.getNext() != null) {
-            keys.add(entry.getKey());
-            entry = entry.getNext();
-        }
-        keys.add(entry.getKey());
-        return keys;
+
+        return null;
     }
 
-    /**
-     * Returns a {@link Collection} view of the values contained in this map.
-     * The collection is backed by the map, so changes to the map are
-     * reflected in the collection, and vice-versa.  If the map is
-     * modified while an iteration over the collection is in progress
-     * (except through the iterator's own <tt>remove</tt> operation),
-     * the results of the iteration are undefined.  The collection
-     * supports element removal, which removes the corresponding
-     * mapping from the map, via the <tt>Iterator.remove</tt>,
-     * <tt>Collection.remove</tt>, <tt>removeAll</tt>,
-     * <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
-     * support the <tt>add</tt> or <tt>addAll</tt> operations.
-     *
-     * @return a collection view of the values contained in this map
-     */
     @Override
-    public Collection<V> values() { //TODO
-        return null;
+    public Collection<V> values() {
+        Collection<V> ks = valueCollection;
+        return (ks != null ? ks : (valueCollection = new Values()));
     }
 
     /**
@@ -373,6 +362,62 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private int hash(Object key) {
         return key.hashCode() % BIN_COUNT;
+    }
+
+    private abstract class HashIterator implements Iterator {
+        Entry next;
+        Entry current;
+
+        HashIterator() {
+            if (head != null) {
+                current = null;
+                next = head;
+            }
+        }
+
+        public final boolean hasNext() {
+            return next != null;
+        }
+
+        final Entry nextEntry() {
+            Entry e = next;
+            current = next;
+            next = e.getNext();
+            return e;
+        }
+
+        public void remove() {
+            if (current == null)
+                throw new IllegalStateException();
+            K key = current.getKey();
+            LastTouchMapImpl.this.remove(key);
+        }
+
+
+    }
+
+    private final class ValueIterator extends HashIterator {
+        public V next() {
+            return nextEntry().value;
+        }
+    }
+
+    private final class Values extends AbstractCollection<V> {
+        public Iterator<V> iterator() {
+            return new ValueIterator();
+        }
+
+        public int size() {
+            return size;
+        }
+
+        public boolean contains(Object o) {
+            return containsValue(o);
+        }
+
+        public void clear() {
+            LastTouchMapImpl.this.clear();
+        }
     }
 
     class Entry {
