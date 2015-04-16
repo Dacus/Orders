@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.*;
-import java.util.function.Consumer;
 
 
 public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
@@ -60,6 +59,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         }
         return false;
     }
+
 
     /**
      * Returns <tt>true</tt> if this map maps one or more keys to the
@@ -120,7 +120,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         int index = hash(key);
         while (entries[index] != null && index < BIN_COUNT) {
             if (((Entry) entries[index]).getKey().equals(key)) {
-                return ((Entry) entries[index]).getValue();
+                return (V) ((Entry) entries[index]).getValue();
             }
             index++;
         }
@@ -220,7 +220,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                     head = null;
                 }
 
-                V value = entry.getValue();
+                V value = (V) entry.getValue();
                 entries[index] = null;
                 size--;
                 return value;
@@ -348,27 +348,23 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return null;//(es = entrySet) == null ? (entrySet = new EntrySet()) : es;
     }
 
-    private final class EntrySet extends AbstractSet<Entry> {
-
-        @Override
-        public Iterator<Entry> iterator() {
-            return null;
+    final class EntrySet extends AbstractSet<Map.Entry<K, V>> {
+        public final int size() {
+            return size;
         }
 
-        @Override
-        public void forEach(Consumer<? super Entry> action) {
-
+        public final void clear() {
+            LastTouchMapImpl.this.clear();
         }
 
-        @Override
-        public int size() {
-            return 0;
+        public final Iterator<Map.Entry<K, V>> iterator() {
+            return new EntryIterator();
         }
-    }
 
-    final class EntryIterator extends HashIterator implements Iterator {
-        public final Entry next() {
-            return nextEntry();
+        final class EntryIterator extends HashIterator implements Iterator {
+            public final Entry next() {
+                return nextEntry();
+            }
         }
     }
 
@@ -380,7 +376,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         }
         Entry iter = head;
         for (int i = 1; (i <= n) && (i <= size); i++) {
-            list.add(iter.getValue());
+            list.add((V) iter.getValue());
             try {
                 iter = iter.getNext();
             } catch (Exception e) {
@@ -450,8 +446,8 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
             return next != null;
         }
 
-        final Entry nextEntry() {
-            Entry e = next;
+        final Entry<K, V> nextEntry() {
+            Entry<K, V> e = next;
             current = next;
             next = e.getNext();
             return e;
@@ -460,7 +456,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         public void remove() {
             if (current == null)
                 throw new IllegalStateException();
-            K key = current.getKey();
+            K key = (K) current.getKey();
             LastTouchMapImpl.this.remove(key);
         }
 
@@ -469,32 +465,28 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private final class ValueIterator extends HashIterator<V> {
         public V next() {
-            return nextEntry().value;
+            return (V) nextEntry().value;
         }
     }
 
     private final class KeyIterator extends HashIterator<K> {
         public K next() {
-            return nextEntry().getKey();
+            return (K) nextEntry().getKey();
         }
     }
 
-    class Entry {
+    class Entry<K, V> implements Map.Entry<K, V> {
         private final K key;
         private V value;
         private Entry previous = null;
         private Entry next = null;
 
-        public Entry(K key, V value, Entry next, Entry previous) {
-            this.key = key;
-            this.value = value;
-            this.next = next;
-            this.previous = previous;
+        public Entry getPrevious() {
+            return previous;
         }
 
-        @Override
-        public String toString() {
-            return "{key: " + key + "} {value: " + value + "}";
+        public void setPrevious(Entry previous) {
+            this.previous = previous;
         }
 
         public Entry getNext() {
@@ -505,27 +497,29 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
             this.next = next;
         }
 
-        public K getKey() {
-            return key;
-        }
-
-        public V getValue() {
-            return value;
-        }
-
-        public void setValue(V value) {
+        public Entry(K key, V value, Entry next, Entry previous) {
+            this.key = key;
             this.value = value;
-        }
-
-        public Entry getPrevious() {
-            return previous;
-        }
-
-        public void setPrevious(Entry previous) {
+            this.next = next;
             this.previous = previous;
         }
 
 
+        @Override
+        public K getKey() {
+            return this.key;
+        }
+
+        @Override
+        public V getValue() {
+            return this.value;
+        }
+
+        @Override
+        public V setValue(V value) {
+            this.value = value;
+            return value;
+        }
     }
 
 }
