@@ -1,47 +1,19 @@
 package com.company;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 
 public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     private static final int BIN_COUNT = 1000;
-    /**
-     * Returns a {@link Set} view of the keys contained in this map.
-     * The set is backed by the map, so changes to the map are
-     * reflected in the set, and vice-versa.  If the map is modified
-     * while an iteration over the set is in progress (except through
-     * the iterator's own <tt>remove</tt> operation), the results of
-     * the iteration are undefined.  The set supports element removal,
-     * which removes the corresponding mapping from the map, via the
-     * <tt>Iterator.remove</tt>, <tt>Set.remove</tt>,
-     * <tt>removeAll</tt>, <tt>retainAll</tt>, and <tt>clear</tt>
-     * operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
-     * operations.
-     *
-     * @return a set view of the keys contained in this map
-     */
     Set<K> keySet = null;
     private Object[] entries = new Object[BIN_COUNT];
     private int size = 0;
     private Entry head = null;
     private Collection<V> valueCollection = null;
 
-    /**
-     * Returns a {@link Collection} view of the values contained in this map.
-     * The collection is backed by the map, so changes to the map are
-     * reflected in the collection, and vice-versa.  If the map is
-     * modified while an iteration over the collection is in progress
-     * (except through the iterator's own <tt>remove</tt> operation),
-     * the results of the iteration are undefined.  The collection
-     * supports element removal, which removes the corresponding
-     * mapping from the map, via the <tt>Iterator.remove</tt>,
-     * <tt>Collection.remove</tt>, <tt>removeAll</tt>,
-     * <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
-     * support the <tt>add</tt> or <tt>addAll</tt> operations.
-     *
-     * @return a collection view of the values contained in this map
-     */
+
 
 
     @Override
@@ -250,6 +222,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
                 V value = entry.getValue();
                 entries[index] = null;
+                size--;
                 return value;
             }
             index++;
@@ -310,12 +283,42 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
     }
 
+    /**
+     * Returns a {@link Set} view of the keys contained in this map.
+     * The set is backed by the map, so changes to the map are
+     * reflected in the set, and vice-versa.  If the map is modified
+     * while an iteration over the set is in progress (except through
+     * the iterator's own <tt>remove</tt> operation), the results of
+     * the iteration are undefined.  The set supports element removal,
+     * which removes the corresponding mapping from the map, via the
+     * <tt>Iterator.remove</tt>, <tt>Set.remove</tt>,
+     * <tt>removeAll</tt>, <tt>retainAll</tt>, and <tt>clear</tt>
+     * operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
+     * operations.
+     *
+     * @return a set view of the keys contained in this map
+     */
     @Override
     public Set<K> keySet() {
         Set<K> ks = keySet;
         return (ks != null ? ks : (keySet = new KeySet()));
     }
 
+    /**
+     * Returns a {@link Collection} view of the values contained in this map.
+     * The collection is backed by the map, so changes to the map are
+     * reflected in the collection, and vice-versa.  If the map is
+     * modified while an iteration over the collection is in progress
+     * (except through the iterator's own <tt>remove</tt> operation),
+     * the results of the iteration are undefined.  The collection
+     * supports element removal, which removes the corresponding
+     * mapping from the map, via the <tt>Iterator.remove</tt>,
+     * <tt>Collection.remove</tt>, <tt>removeAll</tt>,
+     * <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
+     * support the <tt>add</tt> or <tt>addAll</tt> operations.
+     *
+     * @return a collection view of the values contained in this map
+     */
     @Override
     public Collection<V> values() {
         Collection<V> ks = valueCollection;
@@ -338,9 +341,35 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      *
      * @return a set view of the mappings contained in this map
      */
+    Set<Entry> entrySet;
     @Override
     public Set<Map.Entry<K, V>> entrySet() { //TODO
-        return null;
+        Set<Entry> es;
+        return null;//(es = entrySet) == null ? (entrySet = new EntrySet()) : es;
+    }
+
+    private final class EntrySet extends AbstractSet<Entry> {
+
+        @Override
+        public Iterator<Entry> iterator() {
+            return null;
+        }
+
+        @Override
+        public void forEach(Consumer<? super Entry> action) {
+
+        }
+
+        @Override
+        public int size() {
+            return 0;
+        }
+    }
+
+    final class EntryIterator extends HashIterator implements Iterator {
+        public final Entry next() {
+            return nextEntry();
+        }
     }
 
     @Override
