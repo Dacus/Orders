@@ -82,10 +82,17 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
     @Override
     public boolean containsValue(Object value) {
         Entry entry = head;
-        while (entry.getNext() != null) {
-            if (entry.getValue().equals(value)) return true;
-            entry = entry.getNext();
+        if (head == null) {
+            return false;
         }
+        do {
+            if (entry.getValue() == null) {
+                if (value == null) {
+                    return true;
+                }
+            } else if (entry.getValue().equals(value)) return true;
+            entry = entry.getNext();
+        } while (entry != null);
         return false;
 
     }
@@ -136,6 +143,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         }
         if (entries[index] != null) {
             Entry entry = (Entry) entries[index];
+            V oldvalue = (V) ((Entry) entries[index]).getValue();
             entry.setValue(value);
             if (entry.getNext() == null) {
                 if (entry.getPrevious() != null) {
@@ -144,7 +152,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                     head.setPrevious(entry);
                     head = entry;
                     head.setPrevious(null);
-                    return value;
+                    return oldvalue;
                 }
             }
             if (entry.getNext() != null && entry.getPrevious() != null) {
@@ -154,9 +162,9 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
                 head.setPrevious(entry);
                 head = entry;
                 head.setPrevious(null);
-                return value;
+                return oldvalue;
             }
-            return value;
+            return oldvalue;
         }
         if (head == null) {
             entries[index] = new Entry(key, value, null, null);
@@ -168,7 +176,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
             head = (Entry) entries[index];
             size++;
         }
-        return value;
+        return null;
     }
 
     /**
@@ -304,6 +312,28 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return (ks != null ? ks : (keySet = new KeySet()));
     }
 
+    private final class KeySet extends AbstractSet<K> {
+        public Iterator<K> iterator() {
+            return new KeyIterator();
+        }
+
+        public int size() {
+            return size;
+        }
+
+        public boolean contains(Object o) {
+            return containsKey(o);
+        }
+
+        public boolean remove(Object o) {
+            return LastTouchMapImpl.this.remove(o) != null;
+        }
+
+        public void clear() {
+            LastTouchMapImpl.this.clear();
+        }
+    }
+
     /**
      * Returns a {@link Collection} view of the values contained in this map.
      * The collection is backed by the map, so changes to the map are
@@ -325,6 +355,24 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return (ks != null ? ks : (valueCollection = new Values()));
     }
 
+    private final class Values extends AbstractCollection<V> {
+        public Iterator<V> iterator() {
+            return new ValueIterator();
+        }
+
+        public int size() {
+            return size;
+        }
+
+        public boolean contains(Object o) {
+            return containsValue(o);
+        }
+
+        public void clear() {
+            LastTouchMapImpl.this.clear();
+        }
+    }
+
     /**
      * Returns a {@link Set} view of the mappings contained in this map.
      * The set is backed by the map, so changes to the map are
@@ -341,14 +389,14 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
      *
      * @return a set view of the mappings contained in this map
      */
-    Set<Entry> entrySet;
+    Set<Map.Entry<K, V>> entrySet;
     @Override
     public Set<Map.Entry<K, V>> entrySet() { //TODO
-        Set<Entry> es;
-        return null;//(es = entrySet) == null ? (entrySet = new EntrySet()) : es;
+        Set<Map.Entry<K, V>> es;
+        return (es = entrySet) == null ? (entrySet = new EntrySet()) : es;
     }
 
-    final class EntrySet extends AbstractSet<Map.Entry<K, V>> {
+    private final class EntrySet extends AbstractSet<Map.Entry<K, V>> {
         public final int size() {
             return size;
         }
@@ -361,11 +409,7 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
             return new EntryIterator();
         }
 
-        final class EntryIterator extends HashIterator implements Iterator {
-            public final Entry next() {
-                return nextEntry();
-            }
-        }
+
     }
 
     @Override
@@ -391,46 +435,8 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         return key.hashCode() % BIN_COUNT;
     }
 
-    private final class KeySet extends AbstractSet<K> {
-        public Iterator<K> iterator() {
-            return new KeyIterator();
-        }
 
-        public int size() {
-            return size;
-        }
-
-        public boolean contains(Object o) {
-            return containsKey(o);
-        }
-
-        public boolean remove(Object o) {
-            return LastTouchMapImpl.this.remove(o) != null;
-        }
-
-        public void clear() {
-            LastTouchMapImpl.this.clear();
-        }
-    }
-
-    private final class Values extends AbstractCollection<V> {
-        public Iterator<V> iterator() {
-            return new ValueIterator();
-        }
-
-        public int size() {
-            return size;
-        }
-
-        public boolean contains(Object o) {
-            return containsValue(o);
-        }
-
-        public void clear() {
-            LastTouchMapImpl.this.clear();
-        }
-    }
-
+    //Iterators
     private abstract class HashIterator<E> implements Iterator<E> {
         Entry next;
         Entry current;
@@ -475,6 +481,53 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
         }
     }
 
+    final class EntryIterator extends HashIterator implements Iterator {
+        public final Entry next() {
+            return nextEntry();
+        }
+    }
+
+    public int hashCode() {
+        int h = 0;
+        Iterator<Map.Entry<K, V>> i = entrySet().iterator();
+        while (i.hasNext())
+            h += i.next().hashCode();
+        return h;
+    }
+
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+
+        if (!(o instanceof Map))
+            return false;
+        Map<K, V> m = (Map<K, V>) o;
+        if (m.size() != size())
+            return false;
+
+        try {
+            Iterator<Map.Entry<K, V>> i = entrySet().iterator();
+            while (i.hasNext()) {
+                Map.Entry<K, V> e = i.next();
+                K key = e.getKey();
+                V value = e.getValue();
+                if (value == null) {
+                    if (!(m.get(key) == null && m.containsKey(key)))
+                        return false;
+                } else {
+                    if (!value.equals(m.get(key)))
+                        return false;
+                }
+            }
+        } catch (ClassCastException unused) {
+            return false;
+        } catch (NullPointerException unused) {
+            return false;
+        }
+
+        return true;
+    }
+
     class Entry<K, V> implements Map.Entry<K, V> {
         private final K key;
         private V value;
@@ -517,8 +570,18 @@ public class LastTouchMapImpl<K, V> implements LastTouchMap<K, V> {
 
         @Override
         public V setValue(V value) {
+            V oldvalue = this.value;
             this.value = value;
-            return value;
+            return oldvalue;
+        }
+
+        @Override
+        public String toString() {
+            return key.toString() + "=" + value.toString();
+        }
+
+        public final int hashCode() {
+            return Objects.hashCode(getKey()) ^ Objects.hashCode(getValue());
         }
     }
 
